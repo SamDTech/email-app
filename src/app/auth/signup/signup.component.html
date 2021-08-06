@@ -29,6 +29,8 @@
     class="ui red basic label"
   >
     <p *ngIf="authForm?.errors?.passwordsDontMatch">Password Don't match</p>
+    <p *ngIf="authForm?.errors?.noConnection">No Internet Connection detected, failed to signup</p>
+    <p *ngIf="authForm?.errors?.unknownError">Something went wrong, Please try again later</p>
   </div>
 
   <div>
@@ -36,4 +38,4 @@
   </div>
 </form>
 
-{{ authForm.errors | json }}
+
