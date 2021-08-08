@@ -25,4 +25,8 @@ export class EmailService {
   getEmail(id: string): Observable<Email> {
     return this.http.get<Email>(`${this.rootUrl}/${id}`)
   }
+
+  sendEmail(email: Email){
+    return this.http.post(`${this.rootUrl}`, email)
+  }
 }
