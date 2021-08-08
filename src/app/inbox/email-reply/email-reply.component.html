@@ -1,5 +1,5 @@
-<button class="ui button primary" (click)="showModal = true">Reply</button>
-<app-modal *ngIf="showModal" (dismiss)="showModal = false" >
+<button class="ui button primary" (click)="showModal = !showModal">Reply</button>
+<app-modal *ngIf="showModal" (dismiss)="showModal = !showModal" >
   <div modalTitle>
   Reply
   </div>
